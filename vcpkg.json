@@ -1,0 +1,13 @@
+{
+	"name" : "linear-softbody-tool",
+	"version-string" : "0.1",
+	"dependencies": [
+		{
+			"name": "imgui",
+			"features": [ "glfw-binding", "opengl3-binding" ]
+		},
+		"glfw3",
+		"glad",
+		"glm"
+	]
+}
