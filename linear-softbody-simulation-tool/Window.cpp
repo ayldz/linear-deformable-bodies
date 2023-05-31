@@ -36,12 +36,10 @@ void Window::Init()
 
 void Window::Update()
 {
-
-
 	glfwSwapBuffers(m_window);
 	glfwPollEvents();
 
-	this->IsClosed = glfwWindowShouldClose(m_window);
+	glfwSetWindowShouldClose(m_window, this->IsClosed);
 }
 
 void Window::UpdateWindowSize(int width, int height)

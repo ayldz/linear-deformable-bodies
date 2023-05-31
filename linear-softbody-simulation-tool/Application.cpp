@@ -32,7 +32,6 @@ void Application::Run()
 	this->Quit();
 }
 
-
 static Renderer* renderer;
 
 void Application::Start() 
@@ -45,7 +44,11 @@ void Application::Start()
 
 void Application::Update(float dt) 
 {
-	
+	if (Input::GetButton(GLFW_KEY_ESCAPE))
+	{
+		m_window->IsClosed = true;
+	}
+
 	m_window->Update();
 }
 

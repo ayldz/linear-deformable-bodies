@@ -2,7 +2,7 @@
 
 #include "Application.h"
 
-Application& app = Application::Instance();
+static Application& app = Application::Instance();
 
 int main()
 {

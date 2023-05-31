@@ -2,8 +2,8 @@
 
 Input& Input::Instance()
 {
-	static Input* instance = new Input;
-	return *instance;
+	static Input instance{};
+	return instance;
 }
 
 void Input::KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)

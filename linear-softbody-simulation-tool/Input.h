@@ -19,8 +19,8 @@ private:
 	double m_posX, m_posY;
 	double m_lastX, m_lastY;
 
-	std::array<bool, 3> m_mouseButtonPressed;
-	std::array<bool, 350> m_keyPressed;
+	std::array<bool, 3> m_mouseButtonPressed{};
+	std::array<bool, 350> m_keyPressed{};
 
 //make singleton
 public:
