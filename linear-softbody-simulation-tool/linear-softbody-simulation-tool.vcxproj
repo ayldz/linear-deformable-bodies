@@ -136,21 +136,37 @@
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="ConstantVelocityApplication.cpp" />
+    <ClCompile Include="EditorImGui.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mass.cpp" />
+    <ClCompile Include="MassConnectedWithSpring.cpp" />
+    <ClCompile Include="MotionUnderGravition.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="RopeSimulation.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Simulation.cpp" />
+    <ClCompile Include="Spring.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="ConstantVelocityApplication.h" />
+    <ClInclude Include="EditorImGui.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Lsst.h" />
+    <ClInclude Include="Mass.h" />
+    <ClInclude Include="MassConnectedWithSpring.h" />
+    <ClInclude Include="MotionUnderGravition.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="RopeSimulation.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="Simulation.h" />
+    <ClInclude Include="Spring.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

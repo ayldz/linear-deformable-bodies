@@ -8,7 +8,7 @@ public:
 	Renderer(Shader&);
 	~Renderer();
 
-	void Draw(glm::vec2, glm::vec2, float, glm::vec3);
+	void Draw(glm::vec3, glm::vec2, float, glm::vec3);
 
 private:
 	Shader m_shader;

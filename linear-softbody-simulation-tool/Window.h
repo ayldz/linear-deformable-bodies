@@ -6,6 +6,8 @@
 
 class Window 
 {
+	friend class Application;
+
 public:
 	Window(int, int, const std::string&);
 	~Window();
@@ -16,7 +18,6 @@ public:
 
 public:
 	bool IsClosed;
-
 
 private:
 	GLFWwindow* m_window;

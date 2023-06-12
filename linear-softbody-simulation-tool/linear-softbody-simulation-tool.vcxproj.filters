@@ -9,6 +9,26 @@
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="EditorImGui.cpp" />
+    <ClCompile Include="Mass.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Simulation.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstantVelocityApplication.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="MotionUnderGravition.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="MassConnectedWithSpring.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Spring.cpp" />
+    <ClCompile Include="RopeSimulation.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lsst.h" />
@@ -19,5 +39,30 @@
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="EditorImGui.h" />
+    <ClInclude Include="Mass.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Simulation.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantVelocityApplication.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="MotionUnderGravition.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="MassConnectedWithSpring.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Spring.h" />
+    <ClInclude Include="RopeSimulation.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{10e7b0e3-a06e-4f21-8745-81396a63ee42}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
