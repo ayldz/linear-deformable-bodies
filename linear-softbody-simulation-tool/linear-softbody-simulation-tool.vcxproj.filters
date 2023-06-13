@@ -2,14 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Input.cpp" />
-    <ClCompile Include="Window.cpp" />
-    <ClCompile Include="Application.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="Shader.cpp" />
-    <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="Renderer.cpp" />
-    <ClCompile Include="EditorImGui.cpp" />
     <ClCompile Include="Mass.cpp">
       <Filter>Physics</Filter>
     </ClCompile>
@@ -31,18 +23,36 @@
     <ClCompile Include="Spring.cpp">
       <Filter>Physics</Filter>
     </ClCompile>
-    <ClCompile Include="GroundRenderer.cpp" />
+    <ClCompile Include="GroundRenderer.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorImGui.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lsst.h" />
-    <ClInclude Include="Input.h" />
-    <ClInclude Include="Window.h" />
-    <ClInclude Include="Application.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Shader.h" />
-    <ClInclude Include="Scene.h" />
-    <ClInclude Include="Renderer.h" />
-    <ClInclude Include="EditorImGui.h" />
     <ClInclude Include="Mass.h">
       <Filter>Physics</Filter>
     </ClInclude>
@@ -64,11 +74,43 @@
     <ClInclude Include="Spring.h">
       <Filter>Physics</Filter>
     </ClInclude>
-    <ClInclude Include="GroundRenderer.h" />
+    <ClInclude Include="GroundRenderer.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorImGui.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Application</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Physics">
       <UniqueIdentifier>{10e7b0e3-a06e-4f21-8745-81396a63ee42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{f4c694a6-30b6-4195-9b2f-329f6263ee49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{5f73eb60-5bf8-4623-9316-12d163a64343}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

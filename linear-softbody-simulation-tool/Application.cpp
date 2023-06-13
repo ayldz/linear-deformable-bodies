@@ -95,7 +95,7 @@ void Application::Run()
 static Renderer* renderer;
 static GroundRenderer* ground_renderer;
 
-//static EditorImGui editor;
+static EditorImGui editor;
 
 static RopeSimulation* sim = new RopeSimulation(
 	80,
@@ -117,7 +117,7 @@ void Application::Start()
 	renderer = new Renderer(shader, vertices);
 	ground_renderer = new GroundRenderer(shader, ground_vertices);
 
-	//editor.Init(m_window->m_window, "#version 130");
+	editor.Init(m_window->m_window, "#version 130");
 
 	for (size_t i = 0; i < sim->m_masses.size(); i++)
 	{
@@ -164,8 +164,8 @@ void Application::Update(float dt)
 
 	sim->Operate(dt);
 
-	//editor.NewFrame();
-	//editor.Update();
+	editor.NewFrame();
+	editor.Update();
 }
 
 
@@ -176,13 +176,12 @@ void Application::Render()
 
 	for (size_t i = 0; i < sim->m_masses.size(); i++)
 	{
-		renderer->Draw(sim->m_masses[i]->m_pos, glm::vec3(0.5, 0.5, 0.5), 45.0f * (float)glfwGetTime(), glm::vec3(0.0f, i / 80.0f, 1.0f - (i / 80.0f)));
+		renderer->Draw(sim->m_masses[i]->m_pos, glm::vec3(0.25, 0.25, 0.25), 45.0f * (float)glfwGetTime(), glm::vec3(0.0f, i / 80.0f, 1.0f - (i / 80.0f)));
 	}
 
-	ground_renderer->Draw(glm::vec3(0.0f, -15.0f, 0.0f), glm::vec3(50, 1, 50), 0.0f, glm::vec3(0.7, 0.7, 0.7));
+	ground_renderer->Draw(glm::vec3(0.0f, -15.0f, 0.0f), glm::vec3(55, 1, 55), 0.0f, glm::vec3(0.7, 0.7, 0.7));
 
-	//ImGui::ShowDemoWindow();
-	//editor.Render();
+	editor.Render();
 }
 
 void Application::Quit()
@@ -192,7 +191,7 @@ void Application::Quit()
 	delete sim;
 	sim = nullptr;
 
-	//editor.Shutdown();
+	editor.Shutdown();
 
 	delete renderer;
 	renderer = nullptr;
