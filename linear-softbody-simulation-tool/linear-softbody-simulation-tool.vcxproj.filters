@@ -25,10 +25,13 @@
     <ClCompile Include="MassConnectedWithSpring.cpp">
       <Filter>Physics</Filter>
     </ClCompile>
-    <ClCompile Include="Spring.cpp" />
     <ClCompile Include="RopeSimulation.cpp">
       <Filter>Physics</Filter>
     </ClCompile>
+    <ClCompile Include="Spring.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="GroundRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lsst.h" />
@@ -55,10 +58,13 @@
     <ClInclude Include="MassConnectedWithSpring.h">
       <Filter>Physics</Filter>
     </ClInclude>
-    <ClInclude Include="Spring.h" />
     <ClInclude Include="RopeSimulation.h">
       <Filter>Physics</Filter>
     </ClInclude>
+    <ClInclude Include="Spring.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="GroundRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Physics">

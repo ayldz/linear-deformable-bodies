@@ -138,6 +138,7 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="ConstantVelocityApplication.cpp" />
     <ClCompile Include="EditorImGui.cpp" />
+    <ClCompile Include="GroundRenderer.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mass.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="ConstantVelocityApplication.h" />
     <ClInclude Include="EditorImGui.h" />
+    <ClInclude Include="GroundRenderer.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Lsst.h" />
     <ClInclude Include="Mass.h" />

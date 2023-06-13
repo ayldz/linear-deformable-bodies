@@ -1,20 +1,21 @@
 #pragma once
 #include "Mass.h"
+#include "Lsst.h"
 
 class Simulation
 {
 public:
 	int m_numOfMasses;
-	Mass** m_masses;
+	std::vector<Mass*> m_masses{};
 
 	Simulation(int numOfMasses, float m)
 	{
 		this->m_numOfMasses = numOfMasses;
-		this->m_masses = new Mass*[numOfMasses];
+		
 
-		for (size_t a = 0; a < m_numOfMasses; ++a)
+		for (size_t i = 0; i < m_numOfMasses; ++i)
 		{
-			m_masses[a] = new Mass(m);
+			m_masses.push_back(new Mass(m));
 		}
 
 	}
@@ -23,12 +24,9 @@ public:
 	{
 		for (size_t i = 0; i < m_numOfMasses; i++)
 		{
-			delete(m_masses[i]);
+			delete m_masses[i];
 			m_masses[i] = nullptr;
 		}
-
-		delete(m_masses);
-		m_masses = nullptr;
 	}
 
 	Mass* GetMass(int index)

@@ -1,14 +1,15 @@
 #pragma once
 #include "Simulation.h"
 #include "Spring.h"
+#include "Lsst.h"
 
 class RopeSimulation : public Simulation
 {
 public:
-	Spring** m_springs;
-	
+	std::vector<Spring*> m_springs{};
+
 	glm::vec3 m_gravitation;
-	
+
 	glm::vec3 m_ropeConnectionPos;
 	glm::vec3 m_ropeConnectionVel;
 
@@ -31,7 +32,7 @@ public:
 		float groundFrictionConstant,
 		float groundAbsorptionConstant,
 		float groundHeight
-	) : Simulation(numOfMasses, m) 
+	) : Simulation(numOfMasses, m)
 	{
 		this->m_gravitation = gravitation;
 		this->m_airFrictionConstant = airFrictionConstant;
@@ -42,36 +43,32 @@ public:
 		this->m_ropeConnectionPos = glm::vec3(0);
 		this->m_ropeConnectionVel = glm::vec3(0);
 
-		for (size_t i = 0; i < numOfMasses; ++i)
+		std::cout << m_masses.size() << std::endl;
+
+		for (size_t i = 0; i < m_masses.size(); ++i)
 		{
 			m_masses[i]->m_pos.x = i * springLength;
 			m_masses[i]->m_pos.y = 0;
 			m_masses[i]->m_pos.z = 0;
 		}
 
-	
-		
-
-		m_springs = new Spring* [(numOfMasses - 1)];
-
-
-		for (size_t i = 0; i < (numOfMasses - 1); ++i)
+		for (size_t i = 0; i < m_masses.size() - 1; ++i)
 		{
-			m_springs[i] = new Spring(m_masses[i-1], m_masses[(i)], springConstant, springLength, springFrictionConstant);
+			m_springs.push_back(new Spring(m_masses[i], m_masses[(i + 1)], springConstant, springLength, springFrictionConstant));
 		}
 	}
 
-	void Solve() override 
+	void Solve() override
 	{
-		for (size_t i = 0; i < m_numOfMasses; i++)
+		for (size_t i = 0; i < m_springs.size(); i++)
 		{
 			m_springs[i]->Solve();
 		}
 
-		for (size_t i = 0; i < m_numOfMasses; i++)
+		for (size_t i = 0; i < m_springs.size(); i++)
 		{
 			glm::vec3 v; // temporary
-		
+
 			v.y = 0;
 
 			m_masses[i]->ApplyForce(-v * m_groundFrictionConstant);
@@ -90,7 +87,7 @@ public:
 		}
 	}
 
-	void Simulate(float dt) override 
+	void Simulate(float dt) override
 	{
 		Simulation::Simulate(dt);
 
@@ -106,7 +103,7 @@ public:
 		m_masses[0]->m_vel = m_ropeConnectionVel;
 	}
 
-	void SetRopeConnectionVel(glm::vec3 ropeConnectionVel) 
+	void SetRopeConnectionVel(glm::vec3 ropeConnectionVel)
 	{
 		this->m_ropeConnectionVel = ropeConnectionVel;
 	}

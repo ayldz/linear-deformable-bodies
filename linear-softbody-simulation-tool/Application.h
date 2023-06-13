@@ -2,6 +2,7 @@
 
 #include "Window.h"
 #include "Renderer.h"
+#include "GroundRenderer.h"
 #include "EditorImGui.h"
 #include "Lsst.h"
 #include "ConstantVelocityApplication.h"

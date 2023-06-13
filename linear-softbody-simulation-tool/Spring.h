@@ -24,9 +24,9 @@ public:
 
 	void Solve()
 	{
-		glm::vec3 springVector = m_mass1->m_pos - m_mass2->m_pos; // vector between two masses
+		glm::vec3 springVector = (m_mass1->m_pos) - (m_mass2->m_pos); // vector between two masses
 
-		float r = springVector.length(); // distance between two masses
+		constexpr float r = springVector.length(); // distance between two masses
 
 		glm::vec3 force = glm::vec3(0.0f);
 
