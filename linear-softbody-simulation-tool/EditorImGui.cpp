@@ -20,7 +20,6 @@ void EditorImGui::NewFrame()
 	ImGui::NewFrame();
 }
 
-void SaveProperties();
 
 void EditorImGui::Update()
 {	
@@ -40,16 +39,12 @@ void EditorImGui::Update()
 
 	if (ImGui::Button("Apply Configuration"))
 	{
-		SaveProperties();
+		
 	}
 	
 	ImGui::End();
 }
 
-void SaveProperties() 
-{
-	std::cout << "Properties are saved.." << std::endl;
-}
 
 void EditorImGui::Render()
 {

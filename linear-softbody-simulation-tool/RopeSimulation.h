@@ -39,5 +39,6 @@ public:
 	void Simulate(float dt) override;
 
 	void SetRopeConnectionVel(glm::vec3 ropeConnectionVel);
+
 };
 

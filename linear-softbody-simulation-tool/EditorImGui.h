@@ -1,8 +1,8 @@
 #pragma once
 
 #include "Lsst.h"
-
-#include <imgui.h>
+#include "RopeSimulation.h"
+#include "Application.h"
 
 class EditorImGui 
 {
@@ -15,7 +15,9 @@ public:
 	void Render();
 	void Shutdown();
 
-private:
+	
+
+public:
 
 	//attributes;
 	float m							= 0;

@@ -19,6 +19,7 @@ public:
 	void Update(float);
 	void Render();
 	void Quit();
+	void ApplyConfig(EditorImGui& gui, RopeSimulation& sim);
 
 private:
 	Window* m_window = nullptr;

@@ -1,8 +1,6 @@
 #include "Application.h"
 
-
-std::vector<float> vertices =
-{
+std::vector<float> vertices = {
 	-0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
 	 0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
 	 0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
@@ -46,8 +44,7 @@ std::vector<float> vertices =
 	-0.5f,  0.5f, -0.5f,  0.0f, 1.0f
 };
 
-std::vector<float> ground_vertices =
-{
+std::vector<float> ground_vertices = {
 	 0.5f, 0.0f,  0.5f, 0.0f, 1.0f,
 	 0.5f, 0.0f, -0.5f, 0.0f, 1.0f,
 	-0.5f, 0.0f,  0.5f, 0.0f, 1.0f,
@@ -102,7 +99,7 @@ static RopeSimulation* sim = new RopeSimulation(
 	0.05f,
 	1000.0f,
 	0.05f,
-	0.2f,
+	5.0f,
 	glm::vec3(0, -9.81f, 0),
 	5.0f,
 	1.0f,
@@ -196,3 +193,4 @@ void Application::Quit()
 	delete renderer;
 	renderer = nullptr;
 }
+
